@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 *.Rproj
+.ipynb_checkpoints
 
 # models
 models/
