@@ -1,5 +1,5 @@
 # smart-home-device-attack-detection-
-This is the GitHub repo for the collaborative research work carried out  by Asmau Wali-Zubair (a Ph.D. research) as the lead researcher, and contributed to by myself (Oluwasegun Apejoye) and Thejavathy Vengappa, both MSc Students, under the supervision of Dr. Jun He and Dr. Xiaoqi Ma at Nottingham Trent University, Nottingham, UK.
+This is the GitHub repo for the collaborative research work carried out  by Asmau Wali-Zubair (PhD student) as the lead researcher, and contributed to by myself (Oluwasegun Apejoye) and Thejavathy Vengappa, both MSc Students, under the supervision of Dr. Jun He and Dr. Xiaoqi Ma at Nottingham Trent University, Nottingham, UK.
 
 _**This is an on-going research with aim of creating an innovative approach/tool to address the increasing threat of cyberattacks on smart home IoT devices.**_
 
@@ -34,6 +34,6 @@ The following processes were followed to analyse the private and public data.
 * _Visualization_: Python programing was used on Google Colab to analyse and plot the charts and graphs (see [eda/eda_script.ipynb](eda/eda_script.ipynb)). Corresponding network features for each attack and benign scenario were compared. Each of the analyzed network feature (protocol, packet length, sequence number, TCP flag) was plotted against the respective frame number of the corresponding packet.
 
 
-The conference paper for this project can be access [here](https://ieeexplore.ieee.org/abstract/document/9704944/)
+Publications related to this project (because we have more in future): Wali, A., Apejoye, O., He, J. and Ma, X., 2021, December. [An Exploratory Data Analysis of the Network Behavior of Hive Home Devices](https://ieeexplore.ieee.org/abstract/document/9704944/). In 2021 8th International Conference on Internet of Things: Systems, Management and Security (IOTSMS). IEEE.
 > Please direct all questions or enquiry to Asmau via [email](n0825492@my.ntu.ac.uk)
 
