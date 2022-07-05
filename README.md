@@ -34,6 +34,7 @@ The following processes were followed to analyse the private and public data.
 * _Visualization_: Python programing was used on Google Colab to analyse and plot the charts and graphs (see [eda/eda_script.ipynb](eda/eda_script.ipynb)). Corresponding network features for each attack and benign scenario were compared. Each of the analyzed network feature (protocol, packet length, sequence number, TCP flag) was plotted against the respective frame number of the corresponding packet.
 
 
-Publications related to this project (because we have more in future): Wali, A., Apejoye, O., He, J. and Ma, X., 2021, December. [An Exploratory Data Analysis of the Network Behavior of Hive Home Devices](https://ieeexplore.ieee.org/abstract/document/9704944/). In 2021 8th International Conference on Internet of Things: Systems, Management and Security (IOTSMS). IEEE.
+Publications related to this project (because we have more in future):
+1. Wali, A., Apejoye, O., He, J. and Ma, X., 2021, December. [An Exploratory Data Analysis of the Network Behavior of Hive Home Devices](https://ieeexplore.ieee.org/abstract/document/9704944/). In 2021 8th International Conference on Internet of Things: Systems, Management and Security (IOTSMS). IEEE.
 > Please direct all questions or enquiry to Asmau via [email](n0825492@my.ntu.ac.uk)
 
