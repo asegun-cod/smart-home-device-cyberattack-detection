@@ -25,7 +25,13 @@ _**Dataset Used**_
   * UDP: attack source ip is (192.168.0.102); smart homes devices ip is (192.168.0.104).
   * ICMP: attack and smart home devices ip are the same as UDP.
 * _Attack data_: Three types of DDoS flooding attacks (TCP SYN, UDP and ICMP) were launched on the smart home network and the traffic from this attack was collected. Each attack was collected separately. [see private data](data/private_data/)
-* _Public dataset_: A public normal smart home dataset and IoT attack dataset for TCP SYN, UDP and ICMP were sourced from different sources. These are used for validation purposes as they are also subjected to the same EDA process as the private smart home attack and benign data collected in this research. Check reference 32, 33 and 34 from [Wali, 2021](https://ieeexplore.ieee.org/abstract/document/9704944/) for the public datasets used
+* _Public dataset_: A public normal smart home dataset and IoT attack dataset for TCP SYN, UDP and ICMP were sourced from different sources. These are used for validation purposes as they are also subjected to the same EDA process as the private smart home attack and benign data collected in this research. For the public datasets used see:
+   * S. Garcia, A. Parmisano and M. Erquiaga, ‘‘IoT-23: A labeled dataset with malicious and 
+benign IoT network traffic (version 1.0.0),’’ Zenodo, vol. 20 pp.15, doi: 10.5281/zenodo.4743746, 2020.
+   * N. Koroniotis, N. Moustafa, E. Sitnikova and B. Turnbull, "Towards the development of 
+realistic botnet dataset in the internet of things for network forensic analytics: Bot-iot dataset", Future Generation Computer Systems, vol. 100, pp. 779-796, 2019.
+   * M. Hassan (via Mendeley Data) BUET-DDoS2020 2021 [Online]. 
+https://doi.org/10.17632/bzgf9r36kp.2 [Accessed: 03- Mar- 2022].
 
 _**Exploratory Data Analysis**_
 The following processes were followed to analyse the private and public data.
