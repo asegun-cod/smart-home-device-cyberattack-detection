@@ -6,7 +6,8 @@ _**This is an on-going research with aim of creating an innovative approach/tool
 _**This readme will guide you through the repo**_
 ---
 The repo contain datasets, python scripts and other outputs from different projects carried out as part of this on-going research. Each heading within this readme presents each project including its abstract, methodology and reference to the relevant files (datasets, code script, etc) within this repo that relates to the project.
-- [Project 1](#Project_1)  
+- [Project 1](#Project_1) 
+- [Publications](#Publications)  
 
 
 # Project_1
@@ -33,7 +34,8 @@ The following processes were followed to analyse the private and public data.
 * _Method of representation_: Various methods of visual representation were used like bar charts, pie charts, frequency polygons and scatter plots. The most befitting method of representation was chosen based on the network feature(s) being visualized.
 * _Visualization_: Python programing was used on Google Colab to analyse and plot the charts and graphs (see [eda/eda_script.ipynb](eda/eda_script.ipynb)). Corresponding network features for each attack and benign scenario were compared. Each of the analyzed network feature (protocol, packet length, sequence number, TCP flag) was plotted against the respective frame number of the corresponding packet.
 
-
-The conference paper for this project can be access [here](https://ieeexplore.ieee.org/abstract/document/9704944/)
+# Publications
+Here are the publications related to this project and there will be more in the future:
+1. Wali, A., Apejoye, O., He, J. and Ma, X., 2021, December. [An Exploratory Data Analysis of the Network Behavior of Hive Home Devices](https://ieeexplore.ieee.org/abstract/document/9704944/). In 2021 8th International Conference on Internet of Things: Systems, Management and Security (IOTSMS). IEEE.
 > Please direct all questions or enquiry to Asmau via [email](n0825492@my.ntu.ac.uk)
 
