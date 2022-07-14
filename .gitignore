@@ -4,6 +4,7 @@
 .Ruserdata
 *.Rproj
 .ipynb_checkpoints
+.vscode
 
 # models
 models/
