@@ -21,10 +21,9 @@ def read_multifiles(basepath='/content/', datalist=[], pickle_file=True):
             except:
                 dt = pd.read_csv(item, encoding='latin1', parse_dates = ['Time'])
             
-            assert 'Time since reference or first frame' in dt.columns, "'Time since reference or first frame' column is missing"
             dt['name'] = item.name[:-4]       # to identify the data later
             dt['Sequence Number'].replace([np.nan], '', inplace=True) 
-
+            
             datalist.append(dt)
             if pickle_file:
                 with open(basepath+new_path+item.name[:-4], 'wb') as f:    # save each read data into its file name
