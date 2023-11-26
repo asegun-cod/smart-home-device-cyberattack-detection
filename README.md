@@ -1,5 +1,5 @@
 # smart-home-device-attack-detection-
-This is the GitHub repo for the collaborative research work carried out  by Asmau Wali-Zubair (a Ph.D. research) as the lead researcher, and contributed to by myself (Oluwasegun Apejoye) and Thejavathy Vengappa, both MSc Students, under the supervision of Dr. Jun He and Dr. Xiaoqi Ma at Nottingham Trent University, Nottingham, UK.
+This is the GitHub repo for the collaborative research work carried out  by Asmau Wali-Zubair (PhD student) as the lead researcher, and contributed to by myself (Oluwasegun Apejoye) and Thejavathy Vengappa, both MSc Students, under the supervision of Dr. Jun He and Dr. Xiaoqi Ma at Nottingham Trent University, Nottingham, UK.
 
 _**This is an on-going research with aim of creating an innovative approach/tool to address the increasing threat of cyberattacks on smart home IoT devices.**_
 
@@ -17,12 +17,22 @@ A novel approach to identifying DDoS traffic in the smart-home network via Explo
 Smart homes are gaining more popularity by the day due to the ease they provide in terms of running our homes. However, the energy and resource constrained nature of the smart home devices make security integration challenging, thus making them prone to cyber-attacks. DDoS remains one of the most threatening attacks to this network and IoT in general. In order to curb this issue, there is a need to study the behavioral pattern of this attack and smart home devices at a low level. This will aid in designing a timely and more effective DDoS detection and mitigation framework and policy. DDoS visualization tools can also be improved using this approach. This paper collects DDoS and benign traffic in a real smart home environment and performs an Exploratory Data Analysis (EDA), visualizing the behavioral pattern of 3 types of DDoS flooding attacks when targeted at smart home networks in comparison to the benign smart home traffic pattern. The attacks covered are TCP SYN, ICMP and UDP flooding attacks. For each of the covered attacks, specific smart home traffic properties were selected, correlated and visualized showing their reversed behavior during an attack compared to their normal benign nature. To further validate the findings, public IoT datasets were analyzed in the same manner and the same results were achieved. Finally, this paper proposes a novel approach on how the EDA findings can be applied to better detect DDoS traffic in the smart home network.
 
 ## Methodology
-![image](images/methodology sketch.png)
+![image](images/methodology_sketch.png)
 
 _**Dataset Used**_ 
-* _Benign data_: Normal smart home traffic was collected here, which was generated from using the smart home devices. [see private data](data/private_data/)
+* _Benign data_: Normal smart home traffic was generated in-house in a controled environment from using hive smart home devices [see private data](data/private_data/)
+  * Benign data: smart home devices ip address is (rcr-663.local).
+  * TCPSYN: attack source ip are (192.168.0.103) and (ASHOK-DESKTOP.local); smart home devices ip is (192.168.0.100).
+  * UDP: attack source ip is (192.168.0.102); smart homes devices ip is (192.168.0.104).
+  * ICMP: attack and smart home devices ip are the same as UDP.
 * _Attack data_: Three types of DDoS flooding attacks (TCP SYN, UDP and ICMP) were launched on the smart home network and the traffic from this attack was collected. Each attack was collected separately. [see private data](data/private_data/)
-* _Public dataset_: A public normal smart home dataset and IoT attack dataset for TCP SYN, UDP and ICMP were sourced from different sources: [Tcpsyn](); [UDP](); [ICMP](); [benign](). These are used for validation purposes as they are also subjected to the same EDA process as the private smart home attack and benign data collected in this research.
+* _Public dataset_: A public normal smart home dataset and IoT attack dataset for TCP SYN, UDP and ICMP were sourced from different sources. These are used for validation purposes as they are also subjected to the same EDA process as the private smart home attack and benign data collected in this research. For the public datasets used see:
+   * S. Garcia, A. Parmisano and M. Erquiaga, ‘‘IoT-23: A labeled dataset with malicious and 
+benign IoT network traffic (version 1.0.0),’’ Zenodo, vol. 20 pp.15, doi: 10.5281/zenodo.4743746, 2020.
+   * N. Koroniotis, N. Moustafa, E. Sitnikova and B. Turnbull, "Towards the development of 
+realistic botnet dataset in the internet of things for network forensic analytics: Bot-iot dataset", Future Generation Computer Systems, vol. 100, pp. 779-796, 2019.
+   * M. Hassan (via Mendeley Data) BUET-DDoS2020 2021 [Online]. 
+https://doi.org/10.17632/bzgf9r36kp.2 [Accessed: 03- Mar- 2022].
 
 _**Exploratory Data Analysis**_
 The following processes were followed to analyse the private and public data.
