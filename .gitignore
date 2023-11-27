@@ -5,7 +5,7 @@
 *.Rproj
 .ipynb_checkpoints
 .vscode
-Attack_detection_tool/__pycache__/
+*/__pycache__/
 
 # models
 models/
