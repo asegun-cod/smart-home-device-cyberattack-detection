@@ -46,6 +46,7 @@ The following processes were followed to analyse the private and public data.
 
 # Publications
 Here are the publications related to this project and there will be more in the future:
-1. Wali, A., Apejoye, O., He, J. and Ma, X., 2021, December. [An Exploratory Data Analysis of the Network Behavior of Hive Home Devices](https://ieeexplore.ieee.org/abstract/document/9704944/). In 2021 8th International Conference on Internet of Things: Systems, Management and Security (IOTSMS). IEEE.
+1. Wali, A., Apejoye, O., Raja, T., He, J. and Ma, X., 2022, September. [A Novel Approach to Identifying DDoS Traffic in the Smart Home Network via Exploratory Data Analysis](https://link.springer.com/chapter/10.1007/978-3-031-24801-6_34). In International Conference on Applied Intelligence and Informatics (pp. 478-498). Cham: Springer Nature Switzerland.
+2. Wali, A., Apejoye, O., He, J. and Ma, X., 2021, December. [An Exploratory Data Analysis of the Network Behavior of Hive Home Devices](https://ieeexplore.ieee.org/abstract/document/9704944/). In 2021 8th International Conference on Internet of Things: Systems, Management and Security (IOTSMS). IEEE.
 > Please direct all questions or enquiry to Asmau via [email](n0825492@my.ntu.ac.uk)
 
