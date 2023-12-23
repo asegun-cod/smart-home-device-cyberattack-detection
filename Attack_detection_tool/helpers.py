@@ -54,7 +54,7 @@ from sklearn.preprocessing import StandardScaler
 # modeling tool
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
-from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix, balanced_accuracy_score, accuracy_score, precision_recall_fscore_support 
+from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix, balanced_accuracy_score, accuracy_score, precision_recall_fscore_support, f1_score, roc_auc_score
 
 def extract_tcp_flag(n):
     '''
@@ -101,12 +101,17 @@ def calc_time_diff (timer):
     
 # MODEL EVALUATION
 def print_model_eval (y_true, y_pred):    
-    accuracy = accuracy_score
-    b_accuracy = balanced_accuracy_score
     print('='*50)
-    print('Accuracy: ', accuracy(y_true, y_pred))  
-    print('Balance Accuracy: ', b_accuracy(y_true, y_pred))
+    print('auc: ', roc_auc_score(y_true, y_pred, average="micro"))  
+    print('Balance Accuracy: ', balanced_accuracy_score(y_true, y_pred))
+    print('f1_score: ', f1_score(y_true, y_pred, average="weighted"))
     print('='*50)
+
+def get_model_eval (y_true, y_pred):    
+    return {
+    'Balance Accuracy': balanced_accuracy_score(y_true, y_pred), 
+    'auc' : roc_auc_score(y_true, y_pred, average="micro"),
+    'f1_score': f1_score(y_true, y_pred, average="weighted")}
 
 # VISUALIZATION
 def get_pca (df, scale=True): 
@@ -295,14 +300,15 @@ def make_attack_model (flow_data, clf, scale=False, plot_eval=False):
     met.index = ['precision', 'recall', 'fscore', 'support']
     print(met)
     print_model_eval(y_test, y_pred)
+    score = get_model_eval(y_test, y_pred)
 
     if plot_eval:
         # visualization
         pca_le = get_pca(X_test, scale=False) if scale else get_pca(X_test) # PCA
         plot_pred_label (pca_le, y_pred, title = 'Label-encoding') # predicted label
         # plot_true_label(pca_le, y_test, 'Label-encoding')  # true label
-        
-    return model, scaler
+   
+    return model, scaler, score
 
 def attack_detector (df, trained_model, scaler, device_ipadd=None, roller=7, step=2):
     '''
