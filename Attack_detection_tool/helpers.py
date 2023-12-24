@@ -100,18 +100,23 @@ def calc_time_diff (timer):
   return t_diff
     
 # MODEL EVALUATION
-def print_model_eval (y_true, y_pred):    
-    print('='*50)
-    print('auc: ', roc_auc_score(y_true, y_pred, average="micro"))  
-    print('Balance Accuracy: ', balanced_accuracy_score(y_true, y_pred))
-    print('f1_score: ', f1_score(y_true, y_pred, average="weighted"))
-    print('='*50)
+def get_model_eval (y_true, y_pred, print_eval = False):  
 
-def get_model_eval (y_true, y_pred):    
-    return {
-    'Balance Accuracy': balanced_accuracy_score(y_true, y_pred), 
-    'auc' : roc_auc_score(y_true, y_pred, average="micro"),
-    'f1_score': f1_score(y_true, y_pred, average="weighted")}
+    bacc = balanced_accuracy_score(y_true, y_pred)
+    # auc = roc_auc_score(y_true, y_pred, average="weighted")
+    f1 = f1_score(y_true, y_pred, average="weighted")
+
+    if not print_eval:
+        return {
+        'Balance Accuracy': bacc, 
+        # 'auc' : auc,
+        'f1_score': f1}
+
+    print('='*50)
+    print('Balance Accuracy: ', bacc),
+    # print('auc: ', auc)  
+    print('f1_score: %.2f' %(f1*100))
+    print('='*50)
 
 # VISUALIZATION
 def get_pca (df, scale=True): 
@@ -299,7 +304,7 @@ def make_attack_model (flow_data, clf, scale=False, plot_eval=False):
     met.columns =model.classes_
     met.index = ['precision', 'recall', 'fscore', 'support']
     print(met)
-    print_model_eval(y_test, y_pred)
+    get_model_eval(y_test, y_pred, print_eval=True)
     score = get_model_eval(y_test, y_pred)
 
     if plot_eval:
