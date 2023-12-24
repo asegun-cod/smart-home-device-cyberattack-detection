@@ -104,7 +104,7 @@ def get_model_eval (y_true, y_pred, print_eval = False):
 
     bacc = balanced_accuracy_score(y_true, y_pred)
     # auc = roc_auc_score(y_true, y_pred, average="weighted")
-    f1 = f1_score(y_true, y_pred, average="weighted")
+    f1 = f1_score(y_true, y_pred, average="micro")
 
     if not print_eval:
         return {
